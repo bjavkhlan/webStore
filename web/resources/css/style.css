@@ -1,0 +1,53 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+header {
+    background-color: black;
+    overflow: auto;
+}
+
+header {
+    font-size: 20pt;
+    color: white;
+}
+
+header div.user { float: left; }
+
+header div.shoppingCart { float: right; }
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+
+div.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+div.product {
+    margin: 10px;
+    overflow: auto;
+}
+
+div.product img {
+    float: left;
+    height: 200px;
+    margin: 10px;
+}
+
+div.product div.itemName {
+    font-size: 20pt;
+    margin: 10px;
+}
+
+div.product div.itemPrice {
+    font-size: 25pt;
+    margin: 5px;
+}
+

@@ -7,36 +7,47 @@
 --%>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Web Store</title>
-    <%--<link href="css/style.css" type="text/css" rel="stylesheet" />--%>
-    <%--<script src="js/script.js"></script>--%>
+    <link href="<c:url value='/resources/css/style.css'/>" rel="stylesheet"/>
+    <script src="<c:url value='/resources/js/script.js'/>"></script>
 </head>
 <body>
-<div class="header">
-    <a href="login">login</a>
-    ${user.username}
-    <a href="logout">logout</a>
-</div>
+
+<header>
+    <div class="user">
+        <c:if test="${user == null}" ><a href="login">Login</a></c:if>
+        <c:if test="${user != null}" ><strong>${user.username}</strong></br> <a href="logout">(logout)</a></c:if>
+    </div>
+    <div class="shoppingCart">
+        <a href="shoppingCart"><strong>Shopping Cart</strong> [${shoppingCart.size}]<br/>
+            <a href="checkout">checkout</a>
+            ${shoppingCart.calculateTotalPrice()}
+    </div>
+</header>
+
 <div class="container">
-    <%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
-    <%--<c:out value="${products.size()}"></c:out>--%>
-        ${products.size()}
-    ${products.get(0).getName()}
-        <form action="/" method="post">
-            <input type="text" name="productId" />
-            <input type="submit" value="add to cart" />
-        </form>
 
-
-        <div class="shoppingCart">
-            <a href="shoppingCart"><strong>Shopping Cart</strong> [${shoppingCart.size}]<br/>
-            <a href="checkout">checkout</a><br/>
-                ${shoppingCart.calculateTotalPrice()}
+    <c:forEach items="${products}" var="item">
+        <div class="product">
+            <img  href="<c:url value='${item.picturePath}'/>" alt="${item.name}"/>
+            <div class="itemName">${item.name}</div>
+            <div class="itemPrice">${item.price}</div>
+            <form action="/" method="post">
+                <input type="text" style="visibility: hidden" name="productId" value="${item.id}" /><br/>
+                <input type="submit" value="add to cart" />
+            </form>
         </div>
+    </c:forEach>
 
 
+
+
+    <footer>
+
+    </footer>
 
 </div>
 </body>

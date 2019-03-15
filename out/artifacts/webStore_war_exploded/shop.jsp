@@ -15,6 +15,9 @@
 </head>
 <body>
 <div class="header">
+    <a href="login">login</a>
+    ${user.username}
+    <a href="logout">logout</a>
 </div>
 <div class="container">
     <%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
@@ -32,6 +35,8 @@
             <a href="checkout">checkout</a><br/>
                 ${shoppingCart.calculateTotalPrice()}
         </div>
+
+
 
 </div>
 </body>

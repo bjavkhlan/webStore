@@ -12,7 +12,11 @@
 </head>
 <body>
     <form action="login" method="post">
-
+        Username: <input type="text" name="username" value="${cookie.username.value}"/><br/>
+        Password: <input type="password" name="password"/><br/>
+        <input type="checkbox" value="checked" name="remember" id="rememberme"/><label for="rememberme">Remember me</label><br/>
+        <input type="submit" value="Log in"/>
     </form>
+    <p style="color:red">${err_msg}</p>
 </body>
 </html>

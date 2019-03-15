@@ -17,7 +17,7 @@ public class Authentication implements Filter {
             filterChain.doFilter(req, resp);
             return;
         } else {
-            req.getRequestDispatcher("/WEB-INF/login.jsp").forward(req, resp);
+            req.getRequestDispatcher("login.jsp").forward(req, resp);
             return;
         }
 

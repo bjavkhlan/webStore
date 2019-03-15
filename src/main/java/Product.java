@@ -5,10 +5,11 @@ public class Product {
     private String name;
     private String picturePath;
 
-    public Product(double price, String name) {
+    public Product(double price, String name, String picturePath) {
         this.id = counter++;
         this.price = price;
         this.name = name;
+        this.picturePath = picturePath;
     }
 
     public int getId() {

@@ -1,2 +1,13 @@
-.idea/*
-out/*
+#ignore .idea/ folder
+.idea/
+
+#ignore target/ folder
+target/
+
+#ignore out/ folder
+out/
+
+#ignore class files
+*.class
+
+

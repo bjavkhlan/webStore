@@ -32,7 +32,7 @@
 
     <c:forEach items="${products}" var="item">
         <div class="product">
-            <img  href="<c:url value='${item.picturePath}'/>" alt="${item.name}"/>
+            <div class="itemImage"><img  src="<c:url value='${item.picturePath}'/>" alt="${item.name}"/></div>
             <div class="itemName">${item.name}</div>
             <div class="itemPrice">${item.price}</div>
             <form action="/" method="post">

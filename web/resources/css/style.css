@@ -25,7 +25,6 @@ header div.shoppingCart { float: right; }
 
 header a {
     color: white;
-    text-decoration: none;
 }
 
 
@@ -60,7 +59,7 @@ div.product div.itemName {
 }
 
 div.product div.itemPrice {
-    font-size: 25pt;
+    font-size: 20pt;
     margin: 5px;
 }
 

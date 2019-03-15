@@ -4,19 +4,20 @@ body {
 
 input[type="text"], input[type="password"] {
     height: 1.5em;
-    margin: 8px 0;
     display: inline-block;
     border: 2px solid #ccc;
     border-radius: 4px;
     padding: 12px 20px;
-    font-size: 1.2em;
 }
 
 input[type="submit"] {
     height: 1.5em;
     border-radius: 4px;
     padding: 5px;
-    font-size: 1.2em;
+}
+
+input {
+    margin: 10px;
 }
 
 div.container {

@@ -18,13 +18,12 @@
 
 <header>
     <div class="user">
-        <c:if test="${user == null}" ><a href="login">controller.Login</a></c:if>
+        <c:if test="${user == null}" ><a href="login">Login</a></c:if>
         <c:if test="${user != null}" ><strong>${user.username}</strong></br> <a href="logout">(logout)</a></c:if>
     </div>
     <div class="shoppingCart">
-        <a href="shoppingCart"><strong>Shopping Cart</strong> [${shoppingCart.size}]<br/>
-            <a href="checkout">checkout</a>
-            ${shoppingCart.calculateTotalPrice()}
+        <strong>Shopping Cart</strong><br/>
+        <a href="checkout">(checkout[${shoppingCart.size}])</a>
     </div>
 </header>
 
@@ -34,7 +33,7 @@
         <div class="product">
             <div class="itemImage"><img  src="<c:url value='${item.picturePath}'/>" alt="${item.name}"/></div>
             <div class="itemName">${item.name}</div>
-            <div class="itemPrice">${item.price}</div>
+            <div class="itemPrice">Price: $${item.price}</div>
             <form action="/" method="post">
                 <input type="text" style="visibility: hidden" name="productId" value="${item.id}" /><br/>
                 <input type="submit" value="add to cart" />

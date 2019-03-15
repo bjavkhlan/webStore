@@ -18,13 +18,19 @@
     </c:if>
     <c:if test="${shoppingCart != null}">
         <h2 class="total">Total Price: $${shoppingCart.calculateTotalPrice()}</h2>
-        <ol>
+        <table>
+            <tr><th>Item name</th><th>price</th></tr>
             <c:forEach items="${shoppingCart.items}" var="item">
-                <li class="items">
-                        ${item.name} : $${item.price}
-                </li>
+                <tr>
+                    <td>${item.name}</td>
+                    <td>$${item.price}</td>
+                </tr>
             </c:forEach>
-        </ol>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td><strong>$${shoppingCart.calculateTotalPrice()}</strong></td>
+            </tr>
+        </table>
 
     </c:if>
     <a href="/">Go Back</a>

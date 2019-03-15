@@ -2,20 +2,30 @@ package dao;
 
 import model.User;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class UserData {
-    private User[] users;
-    public UserData() {
-        final int NUM_USER = 3;
-        users = new User[NUM_USER];
-        users[0] = new User("jagaa", "password");
-        users[1] = new User("admin", "admin");
-        users[2] = new User("test", "test");
+    private static List<User> users = new ArrayList<User>(){
+        {
+            add(new User("jagaa", "password"));
+            add(new User("jagaa", "password"));
+            add(new User("admin", "admin"));
+            add(new User("test", "test"));
+        }
+    };
+    private UserData() {
+
     }
 
-    public User getUser(String username) {
+    public static User createUser(String username, String password) {
+        User user = new User(username, password);
+        users.add(user);
+        return user;
+    }
+    public static User getUser(String username) {
         for (User user: users)
             if (user.getUsername().equals(username)) return user;
-
         return null;
     }
 }

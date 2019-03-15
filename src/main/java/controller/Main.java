@@ -13,12 +13,11 @@ import java.io.IOException;
 
 @WebServlet({""})
 public class Main extends HttpServlet {
-    ProductData products = new ProductData();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
         if (session.getAttribute("products") == null)
-            req.getSession().setAttribute("products", products.getProducts());
+            req.getSession().setAttribute("products", ProductData.getProducts());
         req.getRequestDispatcher("shop.jsp").forward(req, resp);
     }
 
@@ -29,7 +28,7 @@ public class Main extends HttpServlet {
         if (cart == null)
             cart = new ShoppingCart();
         int productId = Integer.parseInt(req.getParameter("productId"));
-        cart.addItem(products.getProductById(productId));
+        cart.addItem(ProductData.getProductById(productId));
         session.setAttribute("shoppingCart", cart);
 
         resp.sendRedirect("/");

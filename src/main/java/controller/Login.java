@@ -8,7 +8,6 @@ import dao.UserData;
 import model.User;
 
 public class Login extends HttpServlet {
-    private UserData userData = new UserData();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.sendRedirect("login.jsp");
@@ -21,7 +20,7 @@ public class Login extends HttpServlet {
         String remember = req.getParameter("remember");
         HttpSession session = req.getSession();
 
-        User user = userData.getUser(username);
+        User user = UserData.getUser(username);
         if (user == null) {
             session.setAttribute("err_msg","Username is not correct!");
             resp.sendRedirect("login");

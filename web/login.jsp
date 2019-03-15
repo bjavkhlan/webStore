@@ -19,7 +19,7 @@
         Password: <input type="password" name="password"/><br/>
         <input type="checkbox" value="checked" name="remember" id="rememberme"/><label for="rememberme">Remember me</label><br/>
         <input type="submit" value="Log in"/>
-
+        <a href="signup">Create a new account</a>
         <p style="color:red">${err_msg}</p>
     </form>
 </div>

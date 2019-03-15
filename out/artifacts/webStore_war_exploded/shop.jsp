@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: jagaa
+  model.User: jagaa
   Date: 3/14/19
   Time: 2:04 PM
   To change this template use File | Settings | File Templates.
@@ -18,7 +18,7 @@
 
 <header>
     <div class="user">
-        <c:if test="${user == null}" ><a href="login">Login</a></c:if>
+        <c:if test="${user == null}" ><a href="login">controller.Login</a></c:if>
         <c:if test="${user != null}" ><strong>${user.username}</strong></br> <a href="logout">(logout)</a></c:if>
     </div>
     <div class="shoppingCart">

@@ -1,3 +1,5 @@
+package model;
+
 public class Product {
     private static int counter = 0;
     private int id;

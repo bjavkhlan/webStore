@@ -1,3 +1,7 @@
+package dao;
+
+import model.User;
+
 public class UserData {
     private User[] users;
     public UserData() {

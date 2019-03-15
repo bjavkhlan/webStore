@@ -1,6 +1,11 @@
+package controller;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.IOException;
+
+import dao.UserData;
+import model.User;
 
 public class Login extends HttpServlet {
     private UserData userData = new UserData();

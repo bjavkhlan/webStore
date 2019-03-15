@@ -1,3 +1,8 @@
+package controller;
+
+import dao.ProductData;
+import model.ShoppingCart;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

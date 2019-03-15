@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>login</servlet-name>
-        <servlet-class>Login</servlet-class>
+        <servlet-class>controller.Login</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>login</servlet-name>
@@ -15,7 +15,7 @@
 
     <servlet>
         <servlet-name>logout</servlet-name>
-        <servlet-class>Logout</servlet-class>
+        <servlet-class>controller.Logout</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>logout</servlet-name>
@@ -24,7 +24,7 @@
 
     <servlet>
         <servlet-name>checkout</servlet-name>
-        <servlet-class>Checkout</servlet-class>
+        <servlet-class>controller.Checkout</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>checkout</servlet-name>
@@ -33,7 +33,7 @@
 
     <filter>
         <filter-name>authentication</filter-name>
-        <filter-class>Authentication</filter-class>
+        <filter-class>filter.Authentication</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>authentication</filter-name>

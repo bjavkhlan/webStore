@@ -3,7 +3,7 @@ Simple Web Store Application(course assignment), Web Appliction Programming(CS47
 
 # Instructions
   * Make a simple web store application which displays some products, which user can add to shopping cart and finally checkout.
-    * User can browser products and add to cart as a guest.
+    * model.User can browser products and add to cart as a guest.
     * They need to signup or login before they can finally checkout.
       * You can reuse the previous lab code for user authentication.
     * After successful checkout user see confirmation page with thank you message and products as a table and total price.
